@@ -95,26 +95,31 @@ header {
 }
 
 .content{
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: absolute;
     top: 40%;
     left: 2%;
     transform: translateY(-50%);
 }
 h1{
-    font-size: 57px;
-    color: #242023;
-    margin: 20px 0px 20px;
+    font-size: 45px;
+    color: #7cbc44;
+    margin: 0px 0px 18px;
+    text-shadow: 1px 1px 2px #242023;
 }
 h2{
-   color: #110b09; 
-   font-size: 25px;
-   margin-bottom: 20px;
+   color: #242023; 
+   font-size: 35px;
+   margin-bottom: 10px;
    letter-spacing: 1px;
 }
 h4{
-    color: #110b09;
-    font-size: 25px;
-    letter-spacing: 0.5px;
+    color: #242023;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 .button{
     position: absolute;
@@ -126,6 +131,7 @@ h4{
     font-weight: bold;
     padding: 13px 30px;
     transform: 0.4s ease;
+    margin-top: 10px;
 }
 .button:hover{
     background-color: #f35424;
