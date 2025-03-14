@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milo.ai - Product Overview</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #FAF9F6;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s ease;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: #FAF9F6;
+    color:#7cbc44;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    overflow: visible;
+ }
+
+
+ .nav .container{
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+   margin-left: 0; 
+   gap: 0px;
+}
+
+.logo img{
+    width: 187px;
+}
+.navlist{
+    gap: 30px;
+    margin-right: 150px;
+    transition: 0.3s ease-in-out;
+}
+.navlist li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.navlist li a:hover{
+    color: #242023;
+    text-decoration: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    text-decoration: none;
+    color: #7cbc44;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    gap: 5px;
+}
+
+.dropbtn::after {
+    content: "▼";
+    font-size: 12px;
+    color: #7cbc44;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+}
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    color: #242023;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content li a:hover {
+    background: #f3f3f3;
+    color: #7cbc44;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0px);
+    opacity: 1;
+}
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        .features ul li::before {
+            content: "✔";
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .highlight {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="container flex">
+            <div class="logo flex">
+                <img src="images/Final_logo-removebg-preview.png" alt="ISTL">
+            </div>
+            <ul class="navlist flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Services
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="wallarm.html">Wallarm</a></li>
+                        <li><a href="Mialo.html">Mialo.AI</a></li>
+                        <li><a href="emudhraa.html">eMudhra</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <h2>Introduction to eMudhra </h2>
+        <p>Milo.ai is an innovative AI-powered assistant designed to help individuals and teams streamline their workflows, manage tasks, and enhance productivity. Whether you're working on personal projects or collaborating with a team, Milo.ai is here to make your life easier.</p>
+    </section>
+    <section>
+        <h2>Features</h2>
+        <div class="features">
+            <ul>
+                <li>Smart task management and scheduling</li>
+                <li>AI-driven insights and recommendations</li>
+                <li>Seamless integration with popular tools like Google Calendar, Slack, and Trello</li>
+                <li>Natural language processing for easy interaction</li>
+                <li>Customizable workflows to suit your needs</li>
+            </ul>
+        </div>
+            <button onclick="showMore('features')">Learn More</button>
+            <div id="features" class="highlight">
+                Milo.ai's features are designed to adapt to your unique needs, ensuring a personalized experience that grows with you.
+            </div>
+        </section>
+        <section>
+            <h2>Key Benefits</h2>
+            <div class = "features">
+            <ul>
+                <li>Save time by automating repetitive tasks</li>
+                <li>Improve focus with intelligent prioritization</li>
+                <li>Boost collaboration with real-time updates and shared workspaces</li>
+                <li>Gain actionable insights to optimize your productivity</li>
+                <li>Accessible anytime, anywhere on multiple devices</li>
+            </ul>
+        </div>
+        <button onclick="showMore('benefits')">Learn More</button>
+        <div id="benefits" class="highlight">
+            With Milo.ai, you can achieve more in less time, giving you the freedom to focus on what truly matters.
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Milo.ai. All rights reserved.</p>
+    </footer>
+    <script>
+        function showMore(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html></div>

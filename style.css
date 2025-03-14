@@ -80,41 +80,73 @@ header {
 }
 .navlist li a:hover{
     color: #242023;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .dropdown{
     position: relative;
     display: inline-block;
 }
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    z-index: 2000;
-    border-radius: 15px;
-}
-
-.dropdown-content li a{
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropbtn {
     text-decoration: none;
     color: #7cbc44;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    gap: 5px;
 }
+
+.dropbtn::after {
+    content: "▼";
+    font-size: 12px;
+    color: #7cbc44;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+}
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    color: #242023;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content li a:hover {
+    background: #f3f3f3;
+    color: #7cbc44;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 .hero {
     position: relative;
@@ -258,7 +290,7 @@ h4{
     color: #7cbc44;
     font-size: 60px;
     text-transform: capitalize;
-    margin-top: 0px;
+    margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -275,6 +307,11 @@ h4{
     gap: 20px;
 }
 .scard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
     perspective: 1000px;
     width: 400px;
     height: 300px;
@@ -284,6 +321,12 @@ h4{
     overflow: hidden;
     perspective: 1000px;
     position:relative;
+  }
+
+  .scard p{
+    font-size: 18px;
+    color: #242023;
+    margin-bottom: 10px;
   }
   
   .card-inner {
@@ -307,28 +350,54 @@ h4{
   }
   
   .card-front {
-    background-color: #6A2C70;
-    color: #fff;
+    background-color: #fff;
+    color: #7cbc44;
     display: flex;
     align-items: center;
-    border: 10px solid #6A2C70;
-    border-radius: 10px;
+    border: 2px solid #7cbc44;
+    border-radius: 20px;
     justify-content: center;
     font-size: 24px;
     transform: rotateY(0deg);
   }
   
   .card-back {
-    background-color: #F08A5D;
-    color: #fff;
+    background-color: #fff;
+    color: #221e1f;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    border: 10px solid #F08A5D;
-    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #feb910;
+    box-shadow: 1px 1px 2px #feb910;
+    border-radius: 20px;
     justify-content: center;
     font-size: 24px;
     transform: rotateY(180deg);
+    padding: 20px;
   }
+
+  .card-back p{
+    margin-bottom: 10px;
+  }
+
+.read-more-btn {
+    margin-top: 15px; /* Space from text */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #7cbc44; /* Adjust to match your theme */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #5a9a32;
+}
+
   
 
 .profile{
@@ -414,9 +483,9 @@ h4{
     transform: translate(-50%, 50%);
     opacity: 1;
    }
-/* Footer Styling */
+
 .footer {
-    background: #06212F; /* Dark blue background */
+    background: #06212F; 
     color: white;
     padding: 40px 0;
     font-family: Arial, sans-serif;
@@ -480,7 +549,7 @@ h4{
     background: #45a049;
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 20px;
