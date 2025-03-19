@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallarm- Product Overview</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+.container
+{
+    width:100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #FAF9F6;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s ease;
+    scroll-behavior: smooth;
+    margin: 0%;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: #FAF9F6;
+    color:#7cbc44;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    overflow: visible;
+ }
+
+
+ .nav .container{
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+   margin-left: 0; 
+   gap: 0px;
+}
+
+.logo img{
+    width: 187px;
+}
+.navlist{
+    gap: 30px;
+    margin-right: 150px;
+    transition: 0.3s ease-in-out;
+}
+.navlist li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.navlist li a:hover{
+    color: #242023;
+    text-decoration: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    text-decoration: none;
+    color: #7cbc44;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    gap: 5px;
+}
+
+.dropbtn::after {
+    content: "▼";
+    font-size: 12px;
+    color: #7cbc44;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: rotate(180deg);
+}
+
+.dpd ul li{
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+    margin-left: 0;
+}
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    color: #242023;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content li a:hover {
+    background: #f3f3f3;
+    color: #7cbc44;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0px);
+    opacity: 1;
+}
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.intro p{
+    line-height: 1.8rem;
+
+}
+
+.content {
+    width: 50%;
+}
+.content p{
+    margin-bottom: 20PX
+}
+
+#animation-container {
+    width: 800px;
+    height:400px;
+}
+
+        section {
+            width: 100%;
+            padding: 20px;
+            max-width: 100%;
+            margin: auto;
+        }
+        h1, h2{
+            font-size: 2rem;
+        }
+
+
+        h2 {
+            text-align: center;
+            color: #f05423;
+            border-bottom: 2px solid #7cbc44;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            width: 65%;
+        }
+    
+        ul {
+            margin: 10px 0;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        .features ul li::before {
+            content: "✔";
+            color: #7cbc44;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+          
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="container flex">
+            <div class="logo flex">
+                <img src="images/Final_logo-removebg-preview.png" alt="ISTL">
+            </div>
+            <ul class="navlist flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Services
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dpd">
+                    <ul class="dropdown-content">
+                        <li><a href="wallarm.html">Wallarm</a></li>
+                        <li><a href="Mialo.html">Mialo.AI</a></li>
+                        <li><a href="emudhraa.html">eMudhra</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="intro">
+        <div class="content">
+            <h2>Introduction to Wallarm</h2>
+            <p>Wallarm is a leading API security platform that offers comprehensive protection for applications, APIs, microservices, and AI-driven applications across multi-cloud environments.</p>
+            <p>The platform is designed to help organizations effectively discover, protect, respond to, and test their APIs, ensuring robust security and compliance.</p>
+        </div>
+        <div id="animation-container"></div>
+    </section>
+    
+    <section>
+        <h2>Features</h2>
+        <div class="features">
+        <ul>
+            <li>API Discovery:  Wallarm provides continuous visibility into your API portfolio including AI endpoints and agents, and monitors sensitive data flows. </li>
+            <li>Protection: The platform offers real-time blocking capabilities to defend against various threats. </li>
+            <li>Response: Wallarm streamlines incident response through detailed attack analysis and geolocation-based controls. </li>
+            <li>Security Testing: The platform automates API security testing to identify vulnerabilities, prioritize remediation, and integrate seamlessly into CI/CD pipelines, providing development teams with actionable insights.</li>
+        </ul>
+    </div>
+    </section>
+    <section>
+        <h2>Key Benefits</h2>
+        <div class = "features">
+        <ul>
+            <li>Real-Time Threat Mitigation:   Utilizes AI/ML-based threat detection to identify and block zero-day attacks in real-time, enhancing security posture.</li>
+            <li>Regulatory Compliance: Assists organizations in adhering to industry standards and regulations, such as PCI DSS, GDPR, and CCPA, by implementing robust security measures.</li>
+            <li>Operational Efficiency: Automates security processes, reducing the need for manual intervention and allowing security teams to focus on strategic initiatives.</li>
+            <li>Scalability: Designed to protect APIs and applications at enterprise scale, accommodating growth and increasing complexity.</li>
+        </ul>
+    </div>
+    </section>
+
+    <script>
+        function showMore(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+        lottie.loadAnimation({
+        container: document.getElementById("animation-container"), 
+        renderer: "svg", 
+        loop: true,
+        autoplay: true,
+        path: "Animation - 1742375038514.json"
+    });
+    </script>
+</body>
+</html></div>
