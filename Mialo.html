@@ -153,17 +153,49 @@ header {
     transform: translateY(0px);
     opacity: 1;
 }
-        section {
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.intro p{
+    line-height: 1.8rem;
+
+}
+
+.content {
+    width: 50%;
+}
+.content p{
+    margin-bottom: 20PX
+}
+
+#animation-container {
+    width: 800px;
+    height:400px;
+}
+section {
+            width: 100%;
             padding: 20px;
-            max-width: 800px;
+            max-width: 100%;
             margin: auto;
         }
+        h1, h2{
+            font-size: 2rem;
+        }
+
+
         h2 {
-            color: #333;
-            border-bottom: 2px solid #4CAF50;
+            text-align: center;
+            color: #f05423;
+            border-bottom: 2px solid #7cbc44;
             padding-bottom: 5px;
             margin-bottom: 15px;
+            width: 65%;
         }
+    
         ul {
             margin: 10px 0;
             padding-left: 20px;
@@ -175,46 +207,14 @@ header {
         }
         .features ul li::before {
             content: "✔";
-            color: #4CAF50;
+            color: #7cbc44;
             position: absolute;
             left: 0;
             top: 0;
         }
-        footer {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .highlight {
-            background-color: #e8f5e9;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            display: none;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
     </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+
 </head>
 <body>
     <div class="nav">
@@ -240,10 +240,13 @@ header {
             </ul>
         </div>
     </div>
-    <section>
+    <section class="intro">
+        <div class="content">
         <h2>About Milo.ai</h2>
         <p>Mialo AI is a low code automation and decision intelligence platform designed to help businesses interact with multi-modal data in smarter ways.</p>
         <p>Mialo.AI enables businesses to analyze data in diverse ways, optimize processes, and automate tasks leveraging technologies like AIoT, Deep Learning, Computer vision, Natural Language Processing, Automatic Speech Recognition</p>
+        </div>
+        <div id="animation-container"></div>
     </section>
     <section>
         <h2>Features</h2>
@@ -284,6 +287,13 @@ header {
                 element.style.display = "none";
             }
         }
+        lottie.loadAnimation({
+        container: document.getElementById("animation-container"), 
+        renderer: "svg", 
+        loop: true,
+        autoplay: true,
+        path: "Animation - 1742384159360.json"
+    });
     </script>
 </body>
 </html></div>
