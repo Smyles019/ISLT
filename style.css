@@ -354,12 +354,21 @@ h4{
     color: #7cbc44;
     display: flex;
     align-items: center;
+    flex-direction: column;
     border: 2px solid #7cbc44;
     border-radius: 20px;
     justify-content: center;
     font-size: 24px;
     transform: rotateY(0deg);
+    text-align: center;
+   font-size: 30px;
   }
+  .card-front img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
   
   .card-back {
     background-color: #fff;
