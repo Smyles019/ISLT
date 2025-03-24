@@ -201,7 +201,6 @@ header {
         h2 {
             text-align: center;
             color: #4c8fcc;
-            border-bottom: 2px solid #7cbc44;
             padding-bottom: 5px;
             margin-bottom: 15px;
             width: 65%;
@@ -223,7 +222,59 @@ header {
             left: 0;
             top: 0;
         }
-          
+         
+        .box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    position: relative;
+    width: 325px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 1px 1px 2px #7cbc44;
+    padding: 1.0rem;
+    border: 1px solid #7cbc44;
+    transition: 0.5s ease-out;
+    overflow: hidden;
+   }
+   
+   .cardcontent {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   .card:hover {
+    border-color: #4c8fcc;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 </head>
@@ -243,11 +294,11 @@ header {
                     <div class="dpd">
                     <ul class="dropdown-content">
                         <li><a href="wallarm.html">Wallarm</a></li>
-                        <li><a href="goaml.html">Go AML</a></li>
+                        <li><a href="goaml.html">GoML</a></li>
                         <li><a href="emudhraa.html">eMudhra</a></li>
                         <li><a href="crs.html">CRS</a></li>
                         <li><a href="aml.html">AML</a></li>
-                        <li><a href="gdi.html"></a></li>
+                        <li><a href="gdi.html">GDI</a></li>
                     </ul>
                     </div>
                 </li>
@@ -258,8 +309,8 @@ header {
     </div>
     <section class="intro">
         <div class="content">
-            <h2>Introduction to Go AML XML</h2>
-            <p>ISTL, in partnership with IDBI Intech, provides the **GoAML XML Reporting Solution** to help financial institutions generate and submit **CTR** and **STR/SAR** reports in **FRC-compliant XML format**. The solution automates data retrieval, ensures error-free reporting, and streamlines regulatory compliance with **POCAMLA** requirements.</p>
+            <h2>Introduction to GoML XML</h2>
+            <p>ISTL, in partnership with IDBI Intech, provides the GoML XML Reporting Solution to help financial institutions generate and submit CTR and STR/SAR reports in FRC-compliant XML format. The solution automates data retrieval, ensures error-free reporting, and streamlines regulatory compliance with POCAMLA requirements.</p>
         </div>
         <div id="animation-container"></div>
     </section>
@@ -278,12 +329,30 @@ header {
     <section>
         <h2>Key Benefits</h2>
         <div class = "features">
-        <ul>
-            <li>Efficiency – Automates reporting, reducing time and effort.</li>
-            <li>Accuracy – Ensures error-free submissions with FRC-compliant reports.</li>
-            <li>Convenience – Provides multiple file formats and flexible download options.</li>
-            <li>Compliance assurance – Keeps financial institutions aligned with regulatory mandates.</li>
-        </ul>
+            <div class = "features">
+                <div class="box">
+                    <div class="card">
+                      <div class="cardcontent">
+                            <p>Efficiency – Automates reporting, reducing time and effort.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                         <div class="cardcontent">
+                            <p>Accuracy – Ensures error-free submissions with FRC-compliant reports.</p>
+                        </div>
+                    </div>
+        
+                     <div class="card">
+                          <div class="cardcontent">
+                            <p>Convenience – Provides multiple file formats and flexible download options</p>
+                         </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardcontent">
+                          <p>Compliance assurance – Keeps financial institutions aligned with regulatory mandates.</p>
+                       </div>
+                  </div>   
     </div>
     </section>
 
