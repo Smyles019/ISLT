@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Product Display</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #FAF9F6;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s ease;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: #FAF9F6;
+    color:#7cbc44;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    overflow: visible;
+ }
+
+
+ .nav .container{
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+   margin-left: 0; 
+   gap: 0px;
+}
+
+.logo img{
+    width: 187px;
+}
+.navlist{
+    gap: 30px;
+    margin-right: 150px;
+    transition: 0.3s ease-in-out;
+}
+.navlist li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.navlist li a:hover{
+    color: #242023;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: #7cbc44;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    gap: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn::after {
+    content: "▼";
+    font-size: 12px;
+    color: #7cbc44;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    min-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+    z-index: 10;
+}
+
+.dropdown-content li {
+    list-style: none;
+    position: relative;
+}
+
+.dropdown-content li a {
+    color: #242023;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content li a:hover {
+    background: #f3f3f3;
+    color: #7cbc44;
+}
+
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .read-more-btn:hover {
+            background: #0056b3;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .enterprise, .regulatory {
+            margin-bottom: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div class="nav">
+            <div class="container flex">
+            <div class="logo flex">
+            <img src="images/Final_logo-removebg-preview.png" alt="ISTL">
+        </div>
+        <ul class="navlist flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropbtn">Services
+                    <i class="fa fa-caret-down"></i>
+                </a> 
+                  <ul class="dropdown-content">
+                    <li class="dropdown-submenu">
+                      <a href="services.html">Enterprise Solutions</a>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a href="services.html">Regulatory Solutions</a>
+                    </li>  
+                  </ul>
+                </li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        </div>
+    </header>
+
+    <!-- Enterprise Solutions Section -->
+    <section class="enterprise">
+        <h2>Enterprise Solutions</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="images/security.png" alt="Wallarm" class="product-img">
+                <div class="product-title">Wallarm</div>
+                <div class="product-description">A cloud-native security platform for APIs and applications.</div>
+                <a href="wallarm.html" class="read-more-btn">Read More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/authentication.png" alt="eMudhra" class="product-img">
+                <div class="product-title">eMudhra</div>
+                <div class="product-description">A digital identity and signature solution for secure transactions.</div>
+                <a href="emudhraa.html" class="read-more-btn">Read More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/money-bag (1).png" alt="AML" class="product-img">
+                <div class="product-title">AML</div>
+                <div class="product-description">An anti-money laundering solution for financial compliance.</div>
+                <a href="aml.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Solutions Section -->
+    <section class="regulatory">
+        <h2>Regulatory Solutions</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="images/smart-contracts.png" alt="GoAML" class="product-img">
+                <div class="product-title">GoAML</div>
+                <div class="product-description">An intelligence system for financial crime prevention.</div>
+                <a href="goaml.html" class="read-more-btn">Read More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/analysis.png" alt="GDI" class="product-img">
+                <div class="product-title">GDI</div>
+                <div class="product-description">A global data integration tool for compliance reporting.</div>
+                <a href="gdi.html" class="read-more-btn">Read More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/budget.png" alt="CRS" class="product-img">
+                <div class="product-title">CRS</div>
+                <div class="product-description">A common reporting standard solution for tax transparency.</div>
+                <a href="crs.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
