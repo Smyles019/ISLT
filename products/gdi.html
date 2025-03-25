@@ -222,6 +222,13 @@ header {
             left: 0;
             top: 0;
         }
+        .bens h2{
+            text-align: center;
+            color: #4c8fcc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
 
         .box{
     display: flex;
@@ -283,28 +290,28 @@ header {
     <div class="nav">
         <div class="container flex">
             <div class="logo flex">
-                <img src="images/Final_logo-removebg-preview.png" alt="ISTL">
+                <img src="../images/Final_logo-removebg-preview.png" alt="ISTL">
             </div>
             <ul class="navlist flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Services
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <div class="dpd">
                     <ul class="dropdown-content">
-                        <li><a href="p">Wallarm</a></li>
-                        <li><a href="products/goaml.html">GoML</a></li>
-                        <li><a href="products/emudhraa.html">eMudhra</a></li>
-                        <li><a href="products/crs.html">CRS</a></li>
-                        <li><a href="products/aml.html">AML</a></li>
-                        <li><a href="products/gdi.html">GDI</a></li>
+                        <li><a href="wallarm.html">Wallarm</a></li>
+                        <li><a href="goaml.html">GoML</a></li>
+                        <li><a href="emudhraa.html">eMudhra</a></li>
+                        <li><a href="crs.html">CRS</a></li>
+                        <li><a href="aml.html">AML</a></li>
+                        <li><a href="gdi.html">GDI</a></li>
                     </ul>
                     </div>
                 </li>
                 <li><a href="#">Profile</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="../form.html">Contact us</a></li>
             </ul>
         </div>
     </div>
@@ -328,7 +335,8 @@ header {
     </div>
     </section>
     <section>
-        <h2>Key Benefits</h2>
+        <div class="bens">
+        <h2>Key Benefits</h2></div>
         <div class = "features">
             <div class="box">
                 <div class="card">
@@ -370,7 +378,7 @@ header {
         renderer: "svg", 
         loop: true,
         autoplay: true,
-        path: "animations/Animation - 1742820843819.json"
+        path: "../animations/Animation - 1742820843819.json"
     });
     </script>
 </body>
