@@ -281,6 +281,112 @@ header {
     transform: translate(-50%, 50%);
     opacity: 1;
    }
+   .footer {
+    background: #06212F; 
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 23%;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-column button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-column button:hover {
+    background: #45a049;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: white;
+    font-size: 16px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-column {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
           
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
@@ -303,7 +409,7 @@ header {
                         <a href="../services.html">Enterprise Solutions</a>
                     </li>
                     <li class="dropdown-submenu">
-                      <a href="../services.html">Regulatory Solutions</a>
+                      <a href="../reg.html">Regulatory Solutions</a>
                       </li>  
                     </ul>
                   </li>
@@ -361,6 +467,52 @@ header {
               </div>
     </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <h3>Innovative Software Technologies Ltd.</h3>
+                <p>
+                    ISTL is a leading Solutions provider that understands, identifies, and meets customers' business needs using Technology, Innovation & Specialized Resources.
+                </p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Enterprise Solutions</li>
+                    <li>Telecommunication Solutions</li>
+                    <li>Resource Outsourcing Solutions</li>
+                    <li>Equipment & Asset Leasing Solutions</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>📍 5th Floor, Fortis Tower, Woodvale Grove, Westlands</p>
+                <p>📞 0722483121 / 0736442222 / 0723632998 / 0707235460</p>
+                <p>📧 techinnovations@istlafrica.com</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Join ours newsletter to receive updates on News and offers</p>
+                <form>
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function showMore(id) {
