@@ -170,12 +170,12 @@ header {
     background: none;
 }
 .enterprise, .regulatory {
-    min-height: 70vh;
+    min-height: 70vh; /* Ensures it takes the full viewport height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    padding-top: 15px; 
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers horizontally */
+    padding-top: 30px; 
     box-sizing: border-box;
 }
 
@@ -370,7 +370,7 @@ header {
         </div>
         <ul class="navlist flex">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">About</a></li>
 
                 <li class="dropdown">
                   <a href="#" class="dropbtn">Services
@@ -385,35 +385,47 @@ header {
                     </li>  
                   </ul>
                 </li>
-                <li><a href="index.html#profile">Profile</a></li>
-                <li><a href="form.html">Contact us</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact us</a></li>
             </ul>
         </div>
         </div>
     </header>
 
-
-    <section id="enterprise">
-    <div class="enterprise">
-        <h2>Enterprise Solutions</h2>
+    <section id="regulatory">
+    <div class="regulatory">
+        <h2>Regulatory Solutions</h2>
         <div class="product-container">
             <div class="product-card">
-                <img src="images/security.png" alt="Wallarm" class="product-img">
-                <div class="product-title">Wallarm</div>
-                <div class="product-description">A cloud-native security platform for APIs and applications.</div>
-                <a href="products/wallarm.html" class="read-more-btn">Read More</a>
+                <img src="images/smart-contracts.png" alt="GoAML" class="product-img">
+                <div class="product-title">GoAML</div>
+                <div class="product-description">An intelligence system for financial crime prevention.</div>
+                <a href="products/goaml.html" class="read-more-btn">Read More</a>
             </div>
 
             <div class="product-card">
-                <img src="images/authentication.png" alt="eMudhra" class="product-img">
-                <div class="product-title">eMudhra</div>
-                <div class="product-description">A digital identity and signature solution for secure transactions.</div>
-                <a href="products/emudhraa.html" class="read-more-btn">Read More</a>
+                <img src="images/analysis.png" alt="GDI" class="product-img">
+                <div class="product-title">GDI</div>
+                <div class="product-description">A global data integration tool for compliance reporting.</div>
+                <a href="products/gdi.html" class="read-more-btn">Read More</a>
             </div>
 
+            <div class="product-card">
+                <img src="images/money-bag (1).png" alt="CRS" class="product-img">
+                <div class="product-title">CRS</div>
+                <div class="product-description">A common reporting standard solution for tax transparency.</div>
+                <a href="products/crs.html" class="read-more-btn">Read More</a>
+            </div>
+            <div class="product-card">
+                <img src="images/money-bag.png" alt="AML" class="product-img">
+                <div class="product-title">AML</div>
+                <div class="product-description">An anti-money laundering solution for financial compliance.</div>
+                <a href="products/aml.html" class="read-more-btn">Read More</a>
+            </div>
+        </div>
     </div>
+</div>
     </section>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-column">
