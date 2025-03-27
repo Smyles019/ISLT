@@ -161,7 +161,7 @@ header {
     max-width: 100%;
     margin: auto;
     padding: 60px 20px;
-    background-color: #e4e5da;
+    background-color: #FAF9F6;
 }
 
 
@@ -197,22 +197,6 @@ header {
     line-height: 1.6;
 }
 
-.read-more {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 15px;
-    background-color: #7cbc44;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.read-more:hover {
-    background-color: #f35424;
-}
-
 .about-image {
     width: 50%;
     display: flex;
@@ -236,65 +220,70 @@ header {
     background: none;
 }
 
-.mission, .vision {
-    background: #FAF9F6;
-    padding: 60px 20px;
-}
+.mcontainer {
+    max-width: 100%;
+    margin: auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff, #FAF9F6);
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
 
-.mission .container, .vision .container {
+  .vision, .mission {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .text-content {
+    max-width: 50%;
 }
 
-.mission img, .vision img {
-    width: 50%;
-    max-width: 500px;
-    border-radius: 10px;
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #242023;
+    font-size: 0.95rem;
 }
-
-.mission .text, .vision .text {
-    width: 50%;
-    text-align: left;
-}
-
-.mission h2, .vision h2 {
-    color: #7cbc44;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.mission p, .vision p {
-    font-size: 18px;
+  
+  .text-content {
+    max-width: 50%;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4c8fcc;
+  }
+  
+  h2 span {
+    color: #7abd42;
+  }
+  
+  p {
+    font-size: 1rem;
     color: #333;
+    line-height: 1.6;
+  }
+  
+  
+  .mimg img {
+    max-width: 100%;
+    width: 400px; 
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .mission .container, .vision .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .mission img, .vision img, 
-    .mission .text, .vision .text {
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+   
+  .separator {
+    height: 2px;
+    background: linear-gradient(to right, #4c8fcc, #7abd42);
+    width: 100%;
+    margin: 1rem auto;
+    width: 80%;
+  }
+  
 
 
 html {
@@ -378,7 +367,7 @@ html {
     text-align: center;
 }
 
-/* Social Icons */
+
 .social-icons a {
     color: white;
     font-size: 16px;
@@ -386,7 +375,7 @@ html {
     text-decoration: none;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .footer-column {
         width: 45%;
