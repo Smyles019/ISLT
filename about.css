@@ -154,6 +154,54 @@ header {
     opacity: 1;
 }
 
+.mission, .vision {
+    background: #FAF9F6;
+    padding: 60px 20px;
+}
+
+.mission .container, .vision .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mission img, .vision img {
+    width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.mission .text, .vision .text {
+    width: 50%;
+    text-align: left;
+}
+
+.mission h2, .vision h2 {
+    color: #7cbc44;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission .container, .vision .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission img, .vision img, 
+    .mission .text, .vision .text {
+        width: 100%;
+    }
+}
 
 
 

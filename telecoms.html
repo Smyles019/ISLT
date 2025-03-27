@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallarm- Product Overview</title>
+    <title> Our Services</title>
     <style>
         * {
     margin: 0;
@@ -11,12 +11,9 @@
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
 }
-.container
-{
-    width:100%;
-    max-width: 100%;
+.container{
+    max-width: 1100px;
     margin: auto;
-    padding: 0 20px;
 }
 .flex{
     display:flex;
@@ -40,9 +37,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.4s ease;
     scroll-behavior: smooth;
-    margin: 0%;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 
@@ -96,10 +90,11 @@ header {
     text-decoration: none;
 }
 
-.dropdown{
+.dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropbtn {
     text-decoration: none;
     color: #7cbc44;
@@ -108,6 +103,9 @@ header {
     border-radius: 8px;
     transition: background 0.3s ease-in-out;
     gap: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .dropbtn::after {
@@ -121,27 +119,25 @@ header {
     transform: rotate(180deg);
 }
 
-.dpd ul li{
-    padding: 0;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
     left: 0;
     top: 100%;
     background: #ffffff;
-    min-width: 180px;
+    min-width: 200px;
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
     transform: translateY(10px);
     opacity: 0;
-    margin-left: 0;
+    z-index: 10;
 }
+
 .dropdown-content li {
     list-style: none;
+    position: relative;
 }
 
 .dropdown-content li a {
@@ -158,130 +154,105 @@ header {
     color: #7cbc44;
 }
 
-.dropdown:hover .dropdown-content {
+
+.dropdown:hover > .dropdown-content {
     display: block;
     transform: translateY(0px);
     opacity: 1;
 }
-.intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+.section-divider {
+    border: none;
+    border-top: 1px solid #7cbc44;
+    margin: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
 }
-
-.intro p{
-    line-height: 1.8rem;
-
-}
-
-.content {
-    width: 50%;
-}
-.content p{
-    margin-bottom: 20PX
-}
-
-#animation-container {
-    width: 800px;
-    height:400px;
-}
-
-        section {
-            width: 100%;
-            padding: 20px;
-            max-width: 100%;
-            margin: auto;
-        }
-        h1, h2{
-            font-size: 2rem;
-        }
-
-
-        h2 {
-            text-align: center;
-            color: #4c8fcc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            width: 65%;
-        }
-    
-        ul {
-            margin: 10px 0;
-            padding-left: 0;
-        }
-        ul li {
-            margin: 10px 0;
-            position: relative;
-            padding-left: 25px;
-        }
-        .features ul li::before {
-            content: "‣";
-            color: #7cbc44;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .bens h2{
-            text-align: center;
-            color: #4c8fcc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            width: 100%;
-        }
-        .box{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.card {
-    position: relative;
-    width: 325px;
-    height: 200px;
-    margin: 20px;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 1px 1px 2px #7cbc44;
-    padding: 1.0rem;
-    border: 1px solid #7cbc44;
-    transition: 0.5s ease-out;
-    overflow: hidden;
-   }
-   
-   .cardcontent {
-    color: black;
-    height: 100%;
-    gap: .5em;
+.enterprise, .regulatory {
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
+    align-items: center; 
+    padding-top: 15px; 
+    box-sizing: border-box;
 }
 
-   .text-body {
-    color: rgb(134, 134, 134);
-   }
-   
-   .text-title {
-    font-size: 1.5em;
-    font-weight: bold;
-   }
-   
-   .card:hover {
-    border-color: #4c8fcc;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
-   .card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-   }
-   .footer {
+.enterprise, .regulatory h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-img {
+            width: 45%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background: #4c8fcc;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .read-more-btn:hover {
+            background: #0056b3;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .enterprise, .regulatory {
+            margin-bottom: 50px;
+        }
+        html {
+    scroll-behavior: smooth;
+        }
+        .footer {
     background: #06212F; 
     color: white;
     padding: 40px 0;
@@ -387,89 +358,43 @@ header {
 }
 
 
-          
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 </head>
 <body>
-    <div class="nav">
-        <div class="container flex">
+    <header>
+        
+        <div class="nav">
+            <div class="container flex">
             <div class="logo flex">
-                <img src="../images/Final_logo-removebg-preview.png" alt="ISTL">
-            </div>
-            <ul class="navlist flex">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../aboutus.html">About</a></li>
+            <img src="images/Final_logo-removebg-preview.png" alt="ISTL">
+        </div>
+        <ul class="navlist flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Services
-                      <i class="fa fa-caret-down"></i>
-                  </a> 
-                    <ul class="dropdown-content">
-                      <li class="dropdown-submenu">
-                        <a href="../services.html">Enterprise Solutions</a>
-                    </li>
+                  <a href="#" class="dropbtn">Services
+                    <i class="fa fa-caret-down"></i>
+                </a> 
+                  <ul class="dropdown-content">
                     <li class="dropdown-submenu">
-                      <a href="../reg.html">Regulatory Solutions</a>
-                      </li>
-                      <li class="dropdown-submenu">
-                        <a href="../telecoms.html">Telecommunication Solutions</a>
-                        </li>
-                    </ul>
+                      <a href="services.html">Enterprise Solutions</a>
                   </li>
-                <li><a href="../index.html#profile">Profile</a></li>
-                <li><a href="../form.html">Contact us</a></li>
+                  <li class="dropdown-submenu">
+                    <a href="reg.html">Regulatory Solutions</a>
+                    </li>  
+                    <li class="dropdown-submenu">
+                        <a href="telecoms.html">Telecommunication Solutions</a>
+                        </li>
+                  </ul>
+                </li>
+                <li><a href="index.html#profile">Profile</a></li>
+                <li><a href="form.html">Contact us</a></li>
             </ul>
         </div>
-    </div>
-    <section class="intro">
-        <div class="content">
-            <h2>Wallarm</h2>
-            <p>Wallarm is a leading API security platform that offers comprehensive protection for applications, APIs, microservices, and AI-driven applications across multi-cloud environments.</p>
-            <p>API security is designed to help organizations effectively discover, protect, respond to, and test their APIs, ensuring robust security and compliance.</p>
         </div>
-        <div id="animation-container"></div>
-    </section>
-    
-    <section>
-        <h2>Features</h2>
-        <div class="features">
-        <ul>
-            <li>API Discovery:  API security provides continuous visibility into your API portfolio including AI endpoints and agents, and monitors sensitive data flows. </li>
-            <li>Protection: API security offers real-time blocking capabilities to defend against various threats. </li>
-            <li>Response: API security streamlines incident response through detailed attack analysis and geolocation-based controls. </li>
-            <li>Security Testing: API security automates API security testing to identify vulnerabilities, prioritize remediation, and integrate seamlessly into CI/CD pipelines, providing development teams with actionable insights.</li>
-        </ul>
-    </div>
-    </section>
-    <section>
-        <div class="bens">
-        <h2>Key Benefits</h2></div>
-        <div class = "features">
-            <div class="box">
-                <div class="card">
-                  <div class="cardcontent">
-                        <p>Real-Time Threat Mitigation</p>
-                    </div>
-                </div>
-    
-                <div class="card">
-                     <div class="cardcontent">
-                        <p>Regulatory Compliance</p>
-                    </div>
-                </div>
-    
-                 <div class="card">
-                      <div class="cardcontent">
-                        <p>Operational Efficiency</p>
-                     </div>
-                </div>
-                <div class="card">
-                    <div class="cardcontent">
-                      <p>Scalability</p>
-                   </div>
-              </div>
-    </div>
-    </section>
+    </header>
+
 
     <footer class="footer">
         <div class="container">
@@ -517,22 +442,5 @@ header {
         </div>
     </footer>
 
-    <script>
-        function showMore(id) {
-            const element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
-        }
-        lottie.loadAnimation({
-        container: document.getElementById("animation-container"), 
-        renderer: "svg", 
-        loop: true,
-        autoplay: true,
-        path: "../animations/Animation - 1742375038514.json"
-    });
-    </script>
 </body>
-</html></div>
+</html>
