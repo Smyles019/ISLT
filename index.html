@@ -6,6 +6,7 @@
     <title>ISTL</title>
     <link rel="icon" type="image/x-icon" href="images/image-removebg-preview (1).png">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 </head>
 <body>
     <header>
@@ -49,6 +50,8 @@
             <h3>ISTL is a leading solutions provider that identifies, understands,<br> and meets your business needs through innovation, technology, <br>and specialized resources.</h3>
             <a href="form.html" class="button">Contant Us</a>  
         </div>
+        <div id="lottie-animation" class="hero-animation"></div>
+
     </div>
 
     <hr class="section-divider">
@@ -190,6 +193,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      lottie.loadAnimation({
+          container: document.getElementById('lottie-animation'),
+          renderer: 'svg', 
+          loop: true,      
+          autoplay: true,
+          path: 'animations/Animation - 1743079109906.json' 
+      });
+  </script>
+  
     
 </body>
 </html>
