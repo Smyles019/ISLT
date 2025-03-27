@@ -293,6 +293,38 @@ header {
     transform: translate(-50%, 50%);
     opacity: 1;
    }
+   .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Adds space between text and button */
+        margin: 10px 0;
+        padding: 5px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        margin-top: 8px;
+    }
+
+    .contact-section p {
+        font-size: 18px;
+        color: #333;
+        margin: 0; /* Remove margin to align properly */
+    }
+
+    .contact-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4c8fcc;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .contact-btn:hover {
+        background-color: #7cbc44;
+    }
    .footer {
     background: #06212F; 
     color: white;
@@ -482,6 +514,12 @@ header {
 
     </div>
     </section>
+
+    <div class="contact-section">
+        <p>Want to learn more? <strong>Contact us!</strong></p>
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+    </div>
+
 
     <footer class="footer">
         <div class="container">
