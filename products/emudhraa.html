@@ -39,7 +39,6 @@ body{
     scroll-behavior: smooth;
 }
 
-
 header {
     width: 100%;
     height: auto;
@@ -81,6 +80,11 @@ header {
     margin-right: 150px;
     transition: 0.3s ease-in-out;
 }
+.navlist ul li{
+    padding-left: 0px;
+    padding-top: 0px;
+    margin: 0%;
+}
 .navlist li a{
     font-size: 18px;
     font-weight: bold;
@@ -102,6 +106,9 @@ header {
     border-radius: 8px;
     transition: background 0.3s ease-in-out;
     gap: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .dropbtn::after {
@@ -115,9 +122,6 @@ header {
     transform: rotate(180deg);
 }
 
-.dpd ul li{
-    padding: 0;
-}
 
 .dropdown-content {
     display: none;
@@ -125,17 +129,18 @@ header {
     left: 0;
     top: 100%;
     background: #ffffff;
-    min-width: 180px;
+    min-width: 200px;
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
     transform: translateY(10px);
     opacity: 0;
-    margin-left:0;
+    z-index: 10;
 }
 .dropdown-content li {
     list-style: none;
+    position: relative;
 }
 
 .dropdown-content li a {
@@ -152,11 +157,15 @@ header {
     color: #7cbc44;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover > .dropdown-content {
     display: block;
     transform: translateY(0px);
     opacity: 1;
 }
+
+
+
+
 .intro {
     display: flex;
     align-items: center;
@@ -181,7 +190,7 @@ header {
     height:400px;
 }
 
-section {
+        section {
             width: 100%;
             padding: 20px;
             max-width: 100%;
@@ -200,22 +209,22 @@ section {
             width: 65%;
         }
     
-        ul {
+        .features ul {
             margin: 10px 0;
-            padding-left: 0px;
+            padding-left: 0;
         }
-        ul li {
+        .features ul li {
             margin: 10px 0;
             position: relative;
             padding-left: 25px;
         }
         .features ul li::before {
             content: "‣";
-            color: #4CAF50;
+            color: #7cbc44;
             position: absolute;
             left: 0;
             top: 0;
-        } 
+        }
         .bens h2 {
             text-align: center;
             color: #4c8fcc;
