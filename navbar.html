@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-item {
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .nav-item a {
+            color: #002f5f;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            font-weight: bold;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            display: none;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+        }
+        .nav-item:hover > .dropdown-menu {
+            display: flex;
+            flex-direction: column;
+        }
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            display: none;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            justify-content: space-between;
+        }
+        .nav-item:hover > .mega-menu {
+            display: flex;
+        }
+        .mega-menu .column {
+            flex: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item">
+                <a href="#">About</a>
+                <div class="dropdown-menu">
+                    <a href="#">Who We Are</a>
+                    <a href="#">Our Mission</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#">Services</a>
+                <div class="mega-menu">
+                    <div class="column">
+                        <h4>Category 1</h4>
+                        <a href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                    </div>
+                    <div class="column">
+                        <h4>Category 2</h4>
+                        <a href="#">Service 3</a>
+                        <a href="#">Service 4</a>
+                    </div>
+                    <div class="column">
+                        <h4>Category 3</h4>
+                        <a href="#">Service 5</a>
+                        <a href="#">Service 6</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
