@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA - Product Overview</title>
+    <link rel="icon" type="image/x-icon" href="../images/image-removebg-preview (1).png">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+.container
+{
+    width:100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #FAF9F6;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.4s ease;
+    scroll-behavior: smooth;
+    margin: 0%;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+header {
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color: #FAF9F6;
+    color:#7cbc44;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    overflow: visible;
+ }
+
+
+ .nav .container{
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+   margin-left: 0; 
+   gap: 0px;
+}
+
+.logo img{
+    width: 187px;
+}
+.navlist{
+    gap: 30px;
+    margin-right: 150px;
+    transition: 0.3s ease-in-out;
+}
+.navlist ul li{
+    padding-left: 0px;
+    padding-top: 0px;
+    margin: 0%;
+}
+.navlist li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.navlist li a:hover{
+    color: #242023;
+    text-decoration: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    text-decoration: none;
+    color: #7cbc44;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    gap: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn::after {
+    content: "▼";
+    font-size: 12px;
+    color: #7cbc44;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn::after {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    min-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+    z-index: 10;
+}
+.dropdown-content li {
+    list-style: none;
+    position: relative;
+}
+
+.dropdown-content li a {
+    color: #242023;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content li a:hover {
+    background: #f3f3f3;
+    color: #7cbc44;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.intro p{
+    line-height: 1.8rem;
+
+}
+
+.content {
+    width: 50%;
+}
+.content p{
+    margin-bottom: 20PX
+}
+
+#animation-container {
+    width: 800px;
+    height:400px;
+}
+
+        section {
+            width: 100%;
+            padding: 20px;
+            max-width: 100%;
+            margin: auto;
+        }
+        h1, h2{
+            font-size: 2rem;
+        }
+
+
+        h2 {
+            text-align: center;
+            color: #4c8fcc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            width: 65%;
+        }
+    
+        .features ul {
+            margin: 10px 0;
+            padding-left: 0;
+        }
+        .features ul li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        .features ul li::before {
+            content: "‣";
+            color: #7cbc44;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .bens h2{
+            text-align: center;
+            color: #4c8fcc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+    .box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    position: relative;
+    width: 325px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 1px 1px 2px #7cbc44;
+    padding: 1.0rem;
+    border: 1px solid #7cbc44;
+    transition: 0.5s ease-out;
+    overflow: hidden;
+   }
+   
+   .cardcontent {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   .card:hover {
+    border-color: #4c8fcc;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
+   .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Adds space between text and button */
+        margin: 10px 0;
+        padding: 5px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        margin-top: 8px;
+    }
+
+    .contact-section p {
+        font-size: 18px;
+        color: #333;
+        margin: 0; /* Remove margin to align properly */
+    }
+
+    .contact-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4c8fcc;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .contact-btn:hover {
+        background-color: #7cbc44;
+    }
+   .footer {
+    background: #06212F; 
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 23%;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-column button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-column button:hover {
+    background: #45a049;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: white;
+    font-size: 16px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-column {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+          
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="container flex">
+            <div class="logo flex">
+                <img src="../images/Final_logo-removebg-preview.png" alt="ISTL">
+            </div>
+            <ul class="navlist flex">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutus.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Services
+                      <i class="fa fa-caret-down"></i>
+                  </a> 
+                    <ul class="dropdown-content">
+                      <li class="dropdown-submenu">
+                        <a href="../services.html">Enterprise Solutions</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="../reg.html">Regulatory Solutions</a>
+                      </li>  
+                      <li class="dropdown-submenu">
+                        <a href="../telecoms.html">Telecommunication Solutions</a>
+                        </li>
+                    </ul>
+                  </li>
+                <li><a href="../index.html#profile">Profile</a></li>
+                <li><a href="../form.html">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="intro">
+        <div class="content">
+            <h2>Quality Assurance and Quality Testing</h2>
+            <p>ISTL has partnered with EXPLEO to provide a robust AUTO QA solution. </p>
+            <p>This advanced test automation framework is designed to streamline testing processes, ensuring that your applications are rigorously tested across various environments, configurations, and use cases.</p>
+            <p>With its seamless integration into modern development workflows, AUTO QA is designed to accelerate software delivery and ensure high-quality products.</p>
+        </div>
+        <div id="animation-container"></div>
+    </section>
+    
+    <section>
+        <h2>Features</h2>
+        <div class="features">
+        <ul>
+            <li>Indefinite Right to use- Client has rights to use Auto-Q BA indefinitely post the completion and delivery of the pack.</li>
+            <li>Technology Agnostic - One stop solution for test automation of different technologies like Web, Mobile and APIs / Web Services.</li>
+            <li>24/7 Unmanned Monitoring- Designed to execute, monitor & control the progress without manual intervention</li>
+            <li>Agile Friendly- Suitable for Agile and Waterfall delivery methodologies. Can be integrated with CI/CD pipeline for continuous testing.</li>
+        
+        </ul>
+    </div>
+    </section>
+    <section>
+        <div class="bens">
+        <h2>Key Benefits</h2></div>
+        <div class = "features">
+            <div class="box">
+            <div class="card">
+                <div class="cardcontent">
+                    <p>Speed: Automated tests execute much faster than manual tests, enabling you to run a higher number of tests in less time.</p>
+                </div>
+              </div>
+  
+              <div class="card">
+                   <div class="cardcontent">
+                    <p>Consistency and Accuracy: Automated tests run the same way every time, eliminating the risk of human error and ensuring reliable and consistent test results.</p>
+                  </div>
+              </div>
+  
+               <div class="card">
+                    <div class="cardcontent">
+                        <p>Cost Savings: It significantly reduces the need for repeated manual testing over time, leading to lower long-term testing costs.</p>
+                   </div>
+              </div>
+              <div class="card">
+                  <div class="cardcontent">
+                    <p>Better Test Coverage: Automation allows for more extensive testing across a wider range of scenarios, environments, and configurations.</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="contact-section">
+        <p>Want to learn more? <strong>Contact us!</strong></p>
+        <a href="../form.html" class="contact-btn">Contact Us</a>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <h3>Innovative Software Technologies Ltd.</h3>
+                <p>
+                    ISTL is a leading Solutions provider that understands, identifies, and meets customers' business needs using Technology, Innovation & Specialized Resources.
+                </p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Enterprise Solutions</li>
+                    <li>Telecommunication Solutions</li>
+                    <li>Resource Outsourcing Solutions</li>
+                    <li>Equipment & Asset Leasing Solutions</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>📍 5th Floor, Fortis Tower, Woodvale Grove, Westlands</p>
+                <p>📞 0722483121 / 0736442222 / 0723632998 / 0707235460</p>
+                <p>📧 techinnovations@istlafrica.com</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Join ours newsletter to receive updates on News and offers</p>
+                <form>
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showMore(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+        lottie.loadAnimation({
+        container: document.getElementById("animation-container"), 
+        renderer: "svg", 
+        loop: true,
+        autoplay: true,
+        path: "../animations/Animation - 1743490612950.json" 
+    });
+    </script>
+</body>
+</html></div>
